@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<script src='http://code.jquery.com/jquery-1.6.1.min.js' type='text/javascript'></script>
+</head>
+<body>
+		<button id="boton">Presioname !!</button>
+		<div id="div"></div>
+</body>
+		<script type="text/javascript">
+
+		$("#boton").click(function(){
+			$.post("recibe.php",{id:3},function(respuesta){
+				var res = JSON.parse(respuesta);
+				alert(res.texto +" "+res.resultado);
+			});
+
+		});	
+		
+
+		</script>
+</html>
